@@ -1,6 +1,5 @@
 package org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.config;
 
-import org.kds.ddd.hex.ddd_with_hex.domain.service.OrderCreateService;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.eventpublisher.OrderEventPublisherAdapter;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.OrderPersistenceAdapter;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.mapper.OrderPersistenceMapper;
@@ -22,8 +21,4 @@ public class AdapterConfiguration {
         return new OrderEventPublisherAdapter(applicationEventPublisher);
     }
 
-    @Bean
-    public OrderCreateService orderCreateService(OrderPersistenceAdapter orderPersistenceAdapter, OrderEventPublisherAdapter orderEventPublisherAdapter) {
-        return new OrderCreateService(orderPersistenceAdapter, orderEventPublisherAdapter);
-    }
 }

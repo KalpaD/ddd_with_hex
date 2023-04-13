@@ -3,11 +3,11 @@ package org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence;
 import org.kds.ddd.hex.ddd_with_hex.domain.model.Order;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.mapper.OrderPersistenceMapper;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.repository.OrderRepository;
-import org.kds.ddd.hex.ddd_with_hex.application.ports.output.OrderPersistencePort;
+import org.kds.ddd.hex.ddd_with_hex.application.ports.output.OrderPort;
 
 import java.util.Optional;
 
-public class OrderPersistenceAdapter implements OrderPersistencePort {
+public class OrderPersistenceAdapter implements OrderPort {
 
     private final OrderRepository orderRepository;
     private final OrderPersistenceMapper mapper;
@@ -18,7 +18,7 @@ public class OrderPersistenceAdapter implements OrderPersistencePort {
     }
 
     @Override
-    public Order saveOrder(Order order) {
+    public Order create(Order order) {
         var orderEntity = mapper.toOrderEntity(order);
         orderRepository.save(orderEntity);
         return order;

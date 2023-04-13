@@ -22,7 +22,7 @@ public class Order {
     private Money totalCost;
     private OrderStatus status;
 
-    public Order createOrder(String orderId,
+    public static Order createOrder(String orderId,
                              Customer customer,
                              List<OrderItem> items) {
         return Order.builder()
@@ -34,7 +34,7 @@ public class Order {
                 .build();
     }
 
-    private Money calculateTotalCost(List<OrderItem> items) {
+    private static Money calculateTotalCost(List<OrderItem> items) {
         BigDecimal totalPriceOfItems = calculateTotalPrice(items);
         return Money.builder()
                 .amount(totalPriceOfItems)
@@ -42,13 +42,13 @@ public class Order {
                 .build();
     }
 
-    private BigDecimal calculateTotalPrice(List<OrderItem> items) {
+    private static BigDecimal calculateTotalPrice(List<OrderItem> items) {
         return items.stream()
-                .map(this::calculatePriceOfOrderItem)
+                .map(Order::calculatePriceOfOrderItem)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
-    private BigDecimal calculatePriceOfOrderItem(OrderItem item) {
+    private static BigDecimal calculatePriceOfOrderItem(OrderItem item) {
         BigDecimal itemPrice = item.getProduct()
                 .getPrice()
                 .getAmount();

@@ -4,9 +4,9 @@ import org.kds.ddd.hex.ddd_with_hex.domain.model.Order;
 
 import java.util.Optional;
 
-public interface OrderPersistencePort {
+public interface OrderPort {
 
-    Order saveOrder(Order order);
+    Order create(Order order);
 
     Optional<Order> getOrderById(String id);
 }
