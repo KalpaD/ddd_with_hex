@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
-import org.kds.ddd.hex.ddd_with_hex.arch.DddEntity;
+import org.kds.ddd.hex.ddd_with_hex.arch.ddd.DddEntity;
 
 @DddEntity
 @Value

@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
-import org.kds.ddd.hex.ddd_with_hex.arch.DddValueObject;
+import org.kds.ddd.hex.ddd_with_hex.arch.ddd.DddValueObject;
 
 import java.math.BigDecimal;
 import java.util.Currency;

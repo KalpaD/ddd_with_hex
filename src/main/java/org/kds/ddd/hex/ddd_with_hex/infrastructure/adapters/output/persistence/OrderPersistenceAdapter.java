@@ -1,5 +1,6 @@
 package org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence;
 
+import org.kds.ddd.hex.ddd_with_hex.arch.hex.Adapter;
 import org.kds.ddd.hex.ddd_with_hex.domain.model.Order;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.mapper.OrderPersistenceMapper;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.output.persistence.repository.OrderRepository;
@@ -7,6 +8,7 @@ import org.kds.ddd.hex.ddd_with_hex.application.ports.output.OrderPort;
 
 import java.util.Optional;
 
+@Adapter
 public class OrderPersistenceAdapter implements OrderPort {
 
     private final OrderRepository orderRepository;

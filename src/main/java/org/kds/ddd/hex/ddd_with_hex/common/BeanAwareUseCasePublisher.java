@@ -8,7 +8,6 @@ import java.util.Objects;
 
 @Slf4j
 public class BeanAwareUseCasePublisher implements UseCasePublisher {
-
     @Override
     @SuppressWarnings("unchecked")
     public <R, U extends UseCase> R publish(Class<R> returnClass, U useCase) {

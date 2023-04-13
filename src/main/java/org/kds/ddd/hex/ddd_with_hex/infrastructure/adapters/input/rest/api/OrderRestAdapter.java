@@ -1,5 +1,6 @@
 package org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.input.rest.api;
 
+import org.kds.ddd.hex.ddd_with_hex.arch.hex.Adapter;
 import org.kds.ddd.hex.ddd_with_hex.domain.model.Order;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.input.rest.dto.request.OrderCreateRequest;
 import org.kds.ddd.hex.ddd_with_hex.infrastructure.adapters.input.rest.dto.response.OrderCreateResponse;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1")
+@Adapter
 public class OrderRestAdapter extends BaseController {
     private final OrderRestMapper orderRestMapper;
 

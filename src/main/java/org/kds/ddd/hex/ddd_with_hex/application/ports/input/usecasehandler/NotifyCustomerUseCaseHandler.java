@@ -1,8 +1,9 @@
 package org.kds.ddd.hex.ddd_with_hex.application.ports.input.usecasehandler;
 
 import lombok.extern.slf4j.Slf4j;
-import org.kds.ddd.hex.ddd_with_hex.application.ports.input.usecase.CrateOrder;
 import org.kds.ddd.hex.ddd_with_hex.application.ports.input.usecase.NotifyCustomer;
+import org.kds.ddd.hex.ddd_with_hex.arch.ddd.DddUseCaseHandler;
+import org.kds.ddd.hex.ddd_with_hex.arch.hex.DriverPort;
 import org.kds.ddd.hex.ddd_with_hex.common.ObservableUseCasePublisher;
 import org.kds.ddd.hex.ddd_with_hex.common.UseCaseHandler;
 import org.kds.ddd.hex.ddd_with_hex.common.exception.OrderApiException;
@@ -15,6 +16,8 @@ import java.util.UUID;
 
 @Slf4j
 @Component
+@DddUseCaseHandler
+@DriverPort
 public class NotifyCustomerUseCaseHandler extends ObservableUseCasePublisher implements UseCaseHandler<Notification, NotifyCustomer> {
 
     public NotifyCustomerUseCaseHandler() {
