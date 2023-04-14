@@ -7,6 +7,10 @@ import org.kds.ddd.hex.ddd_with_hex.common.model.UseCase;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * This registry keeps the mappings between use cases and their relevant use case handlers
+ * All user case handlers MUST register here at their initialisation.
+ */
 @Slf4j
 @Getter
 public class UseCaseHandlerRegistry {
