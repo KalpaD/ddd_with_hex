@@ -8,9 +8,11 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Infrastructure adapters get created here.
+ */
 @Configuration
 public class AdapterConfiguration {
-
     @Bean
     public OrderPersistenceAdapter orderPersistenceAdapter(OrderRepository repository, OrderPersistenceMapper mapper) {
         return new OrderPersistenceAdapter(repository, mapper);

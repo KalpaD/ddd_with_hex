@@ -10,7 +10,6 @@ import org.mapstruct.MappingConstants;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface OrderRestMapper {
-
     CrateOrder toProduct(OrderCreateRequest request);
 
     @Mapping(target = "id", source = "id")

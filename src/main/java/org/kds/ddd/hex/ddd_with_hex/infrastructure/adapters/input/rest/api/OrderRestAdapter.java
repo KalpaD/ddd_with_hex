@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Adapter
 public class OrderRestAdapter extends BaseController {
     private final OrderRestMapper orderRestMapper;
-
     public OrderRestAdapter(OrderRestMapper orderRestMapper) {
         this.orderRestMapper = orderRestMapper;
     }

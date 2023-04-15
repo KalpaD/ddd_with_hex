@@ -4,10 +4,12 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import org.kds.ddd.hex.ddd_with_hex.arch.ddd.DbEntity;
 
 @Builder
 @Getter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@DbEntity
 public class Product {
     String id;
     String name;
