@@ -10,7 +10,6 @@ import java.util.Optional;
 
 @Adapter
 public class OrderPersistenceAdapter implements OrderPort {
-
     private final OrderRepository orderRepository;
     private final OrderPersistenceMapper mapper;
 

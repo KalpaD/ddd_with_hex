@@ -10,7 +10,9 @@ import org.kds.ddd.hex.ddd_with_hex.arch.ddd.DddEvent;
 import org.kds.ddd.hex.ddd_with_hex.common.model.Event;
 import org.kds.ddd.hex.ddd_with_hex.domain.model.Customer;
 
-
+/**
+ * Represents domain event OrderCreated from the event storm.
+ */
 @Value
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
