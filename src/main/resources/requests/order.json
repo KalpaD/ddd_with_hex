@@ -1,0 +1,28 @@
+{
+  "id": "134258",
+  "customer": {
+    "id": "3435",
+    "name": "John",
+    "email": "john@gamail.com",
+    "address": {
+      "street": "Allison Street",
+      "city": "Sydeny",
+      "state": "NSW",
+      "zipCode": "3453"
+    }
+  },
+  "items": [{
+    "product": {
+      "id": "5489",
+      "name": "mop",
+      "price": {
+        "amount": "24.50",
+        "currency": "AUD"
+      }
+    },
+    "quantity": 1
+  }
+
+  ]
+
+}
